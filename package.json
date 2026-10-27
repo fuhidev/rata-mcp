@@ -1,0 +1,59 @@
+{
+  "name": "rata-mcp",
+  "version": "2.0.0",
+  "description": "Official Model Context Protocol (MCP) server for RATA (GHM Automate v2) - Antidetect Browser Automation & AI Vision Engine.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rata",
+    "rata-browser",
+    "rata-mcp",
+    "ghmautomate-v2",
+    "ghm-automate",
+    "antidetect",
+    "browser-automation",
+    "ai-agent",
+    "vision"
+  ],
+  "homepage": "https://github.com/fuhidev/rata-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuhidev/rata-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fuhidev/rata-mcp/issues"
+  },
+  "license": "MIT",
+  "author": "BHIT TECH <bhitech.vn@gmail.com> (https://bhitech.vn)",
+  "main": "./dist/index.js",
+  "type": "module",
+  "bin": {
+    "rata-mcp": "./dist/index.js",
+    "rata": "./dist/index.js",
+    "ghm-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "axios": "^1.8.3",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "5.8.2"
+  }
+}
